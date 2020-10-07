@@ -124,10 +124,10 @@ const Question: React.FC = () => {
                                 </td>
                             </tr>
                         </tbody>
-                    </table>
+
+                        <h2 className='h2spacinfagr' />
 
 
-                    <table id="customers2">
                         <thead>
                             <tr>
                                 <th>Critérios Metodológicos</th>
@@ -186,10 +186,10 @@ const Question: React.FC = () => {
                                 </td>
                             </tr>
                         </tbody>
-                    </table>
+
+                        <h2 className='h2spacinfagr' />
 
 
-                    <table id="customers2">
                         <thead>
                             <tr>
                                 <th>Critérios Específicos da área</th>
