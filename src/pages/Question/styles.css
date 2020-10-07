@@ -84,8 +84,10 @@
 
 @media screen and (max-width: 400px) {
     .fsrgtashj{
-        width: 120px;
+        width: 90px;
     }
-
+    #customers2 {
+        width: 100%;
+    }
       
 }
