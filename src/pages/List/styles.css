@@ -1,0 +1,59 @@
+.containerlistava{
+    display: flex;
+    align-items: center;
+    justify-content:flex-start;
+    width: 80vw;
+    max-width: 750px;
+    height: 80vh;
+    padding: 10px;
+    background-color: white;
+    flex-direction: column;
+    overflow: scroll;
+}
+
+.spacinfsss{
+    width: 100vw;
+    height: 40px;
+}
+.biufvivfiuw{
+    padding: 25px;
+    text-align: justify;
+}
+
+#customers {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width:95%;
+
+  }
+  
+  #customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  #customers tr:nth-child(even){background-color: #f2f2f2;}
+  
+
+  
+  #customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+  }
+
+
+  .nodunbobw{
+      display: flex;
+      cursor: pointer;
+      background-color: #4BD38A;
+      align-items: center;
+      color: white;
+      justify-content: center;padding: 7px;
+      border-radius: 8px;
+  }
+  .nodunbobw:hover{
+    background-color: #4CAF50;
+  }

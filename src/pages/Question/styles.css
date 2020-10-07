@@ -1,0 +1,77 @@
+.viewContainerQuestionnss{
+    display: flex;
+    align-items: center;
+    justify-content:flex-start;
+    width: 90vw;
+    max-width: 800px;
+    height: 90vh;
+    padding: 10px;
+    background-color: white;
+    flex-direction: column;
+    overflow: scroll;
+}
+
+.h2spacinfagr{
+    padding: 40px;
+}
+
+.divavalafgvr{
+    cursor: pointer;
+}
+.divavalafgvrAA{
+    cursor: pointer;
+    color:green;
+    font-weight: bold;
+}
+.asvnoarivfhcor0tjpew{
+    display: flex;
+    padding-top: 40px;
+    flex-direction: column;
+    height: 200px;
+    width: 80%;
+}
+
+.bcuoahsvoyuvvtasbp{
+    width: 100%;
+    height: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+
+}
+
+
+
+#customers2 {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 80%;
+  }
+  
+  #customers2 td, #customers2 th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  .tdaaadvr{
+      display: flex;
+        align-items: flex-end;
+        flex-direction: row;
+      width: 60%;
+  }
+
+  .fsrgtashj{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 200px;
+    height: 100%;
+    justify-content: space-around;
+  }
+  
+  #customers2 th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #E5E5E5;
+    color: #707070;
+  }

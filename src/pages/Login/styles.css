@@ -21,20 +21,9 @@
     justify-items: center;
  }
 
-input[type=text], select {
-    width: 80%;
-    height: 15%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    align-items: center;
-    justify-content: center;
-    justify-items: center;
-  }
-input[type=password], select {
+
+
+  .fggrqqrg4fwg , select {
     width: 80%;  
     height: 15%;
     padding: 12px 20px;
@@ -68,6 +57,7 @@ input[type=password], select {
     background-color: #378183;
     width: 80%;
   }
+ 
   
 
 @media screen and (max-width: 300px) {

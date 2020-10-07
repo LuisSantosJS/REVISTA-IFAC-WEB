@@ -1,5 +1,5 @@
-import React, { createContext, useState, useContext } from 'react';
-// import api from '../service/api';
+import React, { createContext, useState, useContext, useEffect } from 'react';
+import api from '../service/api';
 
 type ContextType = {
     userSaved: boolean;
@@ -29,34 +29,35 @@ const ContextMain = createContext<ContextType>({
 const Provider: React.FC = ({ children }) => {
 
 
-    const [userSaved, setUserSaved] = useState<boolean>(true);
+    const [userSaved, setUserSaved] = useState<boolean>(false);
     const [token, setToken] = useState<string>('');
     const [userEmail, setUserEmail] = useState<string>('');
     const [userPassword, setUserPassword] = useState<string>('');
 
-    // useEffect(() => {
-    //     const checkAuth = () => {
-    //         console.log('apertado')
-    //         api.post('/users/login', {
-    //             email: userEmail.toLowerCase(),
-    //             password: userPassword
-    //         }).then(res => {
-    //             if (res.data.message === 'error') {
-    //                 return setUserSaved(false);
-    //             }
-    //             setToken(res.data.token);
-    //         }).catch(res => console.log('aaaa', res)).finally(() => {
-    //             setTimeout(() => {
-    //                 return checkAuth();
-    //             }, 7000);
-    //         })
-    //     }
-    //     if (userSaved) {
-    //         setTimeout(() => {
-    //             return checkAuth();
-    //         }, 7000);
-    //     }
-    // }, [userSaved]);
+    useEffect(() => {
+        const checkAuth = () => {
+            api.post('/users/login', {
+                email: userEmail.toLowerCase(),
+                password: userPassword
+            }).then(res => {
+                console.log(res.data)
+                if (res.data.message === 'error') {
+                    return setUserSaved(false);
+                }
+                setToken(res.data.token);
+            }).catch(res => console.log('aaaa', res)).finally(() => {
+                setTimeout(() => {
+                    return checkAuth();
+                }, Number(120 * 60000));
+            })
+        }
+        if (userSaved) {
+            setTimeout(() => {
+                return checkAuth();
+            }, Number(120 * 60000));
+        }
+        // eslint-disable-next-line 
+    }, [userSaved]);
 
 
 

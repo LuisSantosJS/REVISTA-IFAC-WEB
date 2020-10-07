@@ -44,8 +44,8 @@ const Login: React.FC = () => {
                 <div className='form-admin'>
                     <img src={Logo} alt="IFAC" />
                     <form>
-                        <input type="text" value={email} onChange={(e) => setEmail(e.target.value)} placeholder={'Email'} />
-                        <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder={'Senha'} />
+                        <input type='text' className='fggrqqrg4fwg' value={email} onChange={(e) => setEmail(e.target.value)} placeholder={'Email'} />
+                        <input className='fggrqqrg4fwg' type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder={'Senha'} />
                         <strong onClick={onSubmit} defaultValue="Fazer Login" >ACESSAR SISTEMA</strong>
                     </form>
                 </div>
