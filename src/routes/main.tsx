@@ -1,15 +1,13 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import Login from '../pages/Login';
+import Auth from './auth'
+import Authenticate from './authenticate'
+import { useUserSaved } from '../context/ContextAuth';
 const App: React.FC = () => {
-    return (
-        <>
-            <BrowserRouter>
-                <Switch>
-                    <Route path="/" exact component={Login} />
-                </Switch>
-            </BrowserRouter>
-        </>
-    )
+    const { userSaved } = useUserSaved();
+    if (userSaved) {
+        return <Authenticate />
+    }
+    return <Auth />
+
 }
 export default App;

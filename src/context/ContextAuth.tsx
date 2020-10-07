@@ -1,4 +1,4 @@
-import React, { createContext, useState, useContext, useEffect } from 'react';
+import React, { createContext, useState, useContext } from 'react';
 // import api from '../service/api';
 
 type ContextType = {
@@ -29,7 +29,7 @@ const ContextMain = createContext<ContextType>({
 const Provider: React.FC = ({ children }) => {
 
 
-    const [userSaved, setUserSaved] = useState<boolean>(false);
+    const [userSaved, setUserSaved] = useState<boolean>(true);
     const [token, setToken] = useState<string>('');
     const [userEmail, setUserEmail] = useState<string>('');
     const [userPassword, setUserPassword] = useState<string>('');
