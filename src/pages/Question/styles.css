@@ -64,7 +64,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 200px;
+    width: 10rem;
     height: 100%;
     justify-content: space-around;
   }
@@ -83,9 +83,6 @@
 
 
 @media screen and (max-width: 400px) {
-    .fsrgtashj{
-        width: 35vw;
-    }
     #customers2 {
         width: 100%;
     }
