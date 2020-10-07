@@ -1,0 +1,12 @@
+.viewContainehgxjhcy{
+    display: flex;
+    align-items: center;
+    justify-content:flex-start;
+    width: 90vw;
+    max-width: 800px;
+    height: 90vh;
+    padding: 10px;
+    background-color: white;
+    flex-direction: column;
+    overflow: scroll;
+}

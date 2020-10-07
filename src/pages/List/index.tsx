@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './styles.css';
+import { Link } from 'react-router-dom'
 import api from '../../service/api';
 import { useToken } from '../../context/ContextAuth';
 import Header from '../../components/Header';
@@ -8,6 +9,9 @@ interface Item {
     email: string;
     name: string;
     artigo: string;
+    a: string,
+    b: string,
+    c: string,
 }
 const List: React.FC = () => {
     const { token } = useToken();
@@ -36,12 +40,12 @@ const List: React.FC = () => {
                     <h2 className='biufvivfiuw'>LISTA DE AVALIAÇÕES</h2>
                     <table id="customers">
                         <tbody>
-                            {listItem.map(res => {
+                            {listItem.map((res, index) => {
                                 return (
-                                    <tr key={res.id}>
+                                    <tr key={index}>
                                         <td>{res.name}</td>
                                         <td>{res.artigo}</td>
-                                        <td><span className={'nodunbobw'}>VER AVALIAÇÃO</span></td>
+                                        <td><Link to={`/criterios/${res.a}/${res.b}/${res.c}`} className={'nodunbobw'}>VER AVALIAÇÃO</Link></td>
                                     </tr>
                                 )
                             })}
