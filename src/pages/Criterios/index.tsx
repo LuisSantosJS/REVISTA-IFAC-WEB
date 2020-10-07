@@ -1,7 +1,6 @@
 import React from 'react';
 import './styles.css';
 import { useParams } from 'react-router-dom';
-import { createCall } from 'typescript';
 const Criterios: React.FC = () => {
 
     const chlindren: any = useParams();
