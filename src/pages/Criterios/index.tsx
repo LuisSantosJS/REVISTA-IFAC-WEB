@@ -8,6 +8,7 @@ const Criterios: React.FC = () => {
     const b: string = chlindren.b;
     const c: string = chlindren.c;
     const d: string = chlindren.d;
+    const desc: string = chlindren.desc;
 
     const Aa = a.split(',');
     const Bb = b.split(',');
@@ -116,6 +117,13 @@ const Criterios: React.FC = () => {
                             </tr>
                         </tbody>
                     </table>
+                    <h2 className='h2spacinfagr' />
+
+                    <div className='asvnoarivfhcor0tjpew'>
+                        <label > Comentários adicionais</label>
+                        <textarea value={desc} className='bcuoahsvoyuvvtasbp' name="" id="" />
+                    </div>
+                    <div className="vniuasrbvisbrv"></div>
                 </div>
             </div>
         </>
