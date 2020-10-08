@@ -88,12 +88,28 @@
       cursor: pointer;
       background-color: #4BD38A;
       align-items: center;
+      text-decoration:none; 
       color: white;
       justify-content: center;padding: 7px;
       border-radius: 8px;
   }
+  .nodunbobw2{
+    display: flex;
+    cursor: pointer;
+    background-color: #C00;
+    text-decoration:none; 
+    align-items: center;
+    color: white;
+    justify-content: center;padding: 7px;
+    border-radius: 8px;
+}
+
+
   .nodunbobw:hover{
     background-color: #4CAF50;
+  }
+  .nodunbobw2:hover{
+    background-color: red;
   }
 
   .bcuoahsvoyuvvtasbps{

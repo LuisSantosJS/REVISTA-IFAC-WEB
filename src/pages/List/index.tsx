@@ -64,7 +64,7 @@ const List: React.FC = () => {
                                         <td>{res.name}</td>
                                         <td>{res.artigo}</td>
                                         <td onClick={()=> res.status === 'recusado' ?onRecuseText(res.desculpa) : {}} className={res.status === 'recusado' ? 'reeeeeeed' : ''} >{String(res.status.toUpperCase())}</td>
-                                        <td><Link to={`/criterios/${res.id}`} className={'nodunbobw'}>VER AVALIAÇÃO</Link></td>
+                                        <td><Link to={`/criterios/${res.id}`} className={res.status === 'recusado' ? 'nodunbobw2' : 'nodunbobw'}>VER AVALIAÇÃO</Link></td>
                                     </tr>
                                 )
                             })}
