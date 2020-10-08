@@ -121,7 +121,7 @@ const Criterios: React.FC = () => {
 
                     <div className='asvnoarivfhcor0tjpew'>
                         <label > Comentários adicionais</label>
-                        <textarea value={desc} className='bcuoahsvoyuvvtasbp' name="" id="" />
+                        <textarea value={desc} disabled className='bcuoahsvoyuvvtasbp' name="" id="" />
                     </div>
                     <div className="vniuasrbvisbrv"></div>
                 </div>
