@@ -57,10 +57,10 @@ const List: React.FC = () => {
                             <th>Avaliação</th>
                         </thead>
                         <tbody>
-                            {listItem.map((res, index) => {
+                            {listItem.map((res) => {
     
                                 return (
-                                    <tr key={index}>
+                                    <tr key={res.id}>
                                         <td>{res.name}</td>
                                         <td>{res.artigo}</td>
                                         <td onClick={()=> res.status === 'recusado' ?onRecuseText(res.desculpa) : {}} className={res.status === 'recusado' ? 'reeeeeeed' : ''} >{String(res.status.toUpperCase())}</td>

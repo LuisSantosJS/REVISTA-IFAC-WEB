@@ -75,6 +75,24 @@ display: flex;
 .submcviuas{
     padding: 20px;
 }
+.rerered{
+    width: 80%;
+    height: 15%;
+    background-color: #4BD38A;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    display: flex;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+}
+.rerered:hover{
+    background-color: red;
+}
 
 
 

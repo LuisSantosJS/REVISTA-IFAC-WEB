@@ -31,9 +31,8 @@ const Criterios: React.FC = () => {
                 setC(data.c);
                 setD(data.d);
                 setDesc(data.desc);
-    
             }
-        }).catch((err) => {})
+        }).catch((err) => { })
     }, []);
 
     const Aa: string[] = a.split(',');
@@ -139,6 +138,17 @@ const Criterios: React.FC = () => {
                             </tr>
                         </tbody>
                     </table>
+
+
+                    <h2 className='h2spacinfagr' />
+                    <table id="customers2">
+                        <tbody>
+                            <td>Total</td>
+                            <td>{Number(Number(Aa[0]) + Number(Aa[1]) + Number(Aa[2]) + Number(Aa[3]) + Number(Number(Bb[0]) * 2) + Number(Bb[1]) + Number(Bb[2]) + Number(Number(Bb[3]) * 2) + Number(Number(Cc[0]) * 2) + Number(Number(Cc[1]) * 2) + Number(Number(Cc[2]) * 2) + Number(Number(Cc[3]) * 2) + Number(Number(Cc[4]) * 2))}</td>
+                        </tbody>
+                    </table>
+
+
                     <h2 className='h2spacinfagr' />
 
                     <div className='asvnoarivfhcor0tjpew'>

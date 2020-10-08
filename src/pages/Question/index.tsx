@@ -255,7 +255,7 @@ const Question: React.FC = () => {
                         <table id="customers2">
                             <tbody>
                                 <td>Total</td>
-                                <td>{Number(Number(aa) + Number(bb) + Number(cc) + Number(dd) + Number(Number(ff)*2) + Number(gg) + Number(hh) + Number(Number(ii)*2) + Number(Number(jj) * 2) + Number(Number(kk) * 2) + Number(Number(ll) * 2) + Number(Number(mm) * 2) + Number(Number(nn) * 2))}</td>
+                                <td>{Number(Number(aa) + Number(bb) + Number(cc) + Number(dd) + Number(Number(ff) * 2) + Number(gg) + Number(hh) + Number(Number(ii) * 2) + Number(Number(jj) * 2) + Number(Number(kk) * 2) + Number(Number(ll) * 2) + Number(Number(mm) * 2) + Number(Number(nn) * 2))}</td>
                             </tbody>
                         </table>
 
@@ -266,9 +266,14 @@ const Question: React.FC = () => {
                             <textarea value={desc} onChange={(e) => setDesc(e.target.value)} className='bcuoahsvoyuvvtasbp' name="" id="" />
                         </div>
                         <div className="vniuasrbvisbrv"></div>
-                        <strong className={'submcviuas'} onClick={onSubmit}>
-                            SUBMETER AVALIAÇÃO
-                        </strong>
+                        {oo !== '0' ?
+                            <strong className={'submcviuas'} onClick={onSubmit}>
+                                SUBMETER AVALIAÇÃO
+                            </strong> :
+                            <div className={'rerered'} onClick={onSubmit}>
+                                SUBMETER AVALIAÇÃO
+                        </div>}
+
                         <div className="vniuasrbvisbrv"></div>
 
 
