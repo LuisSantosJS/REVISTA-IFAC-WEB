@@ -10,7 +10,7 @@ const Home: React.FC = () => {
     const List = require('../../assets/list.png');
     const { token } = useToken();
     const { addToast } = useToasts();
-    const [anexo, setAnexo] = useState<any>();
+    const [anexo, setAnexo] = useState<string>('');
     const [email, setEmail] = useState<string>('');
     const [name, setName] = useState<string>('');
     const [artigo, setArtigo] = useState<string>('');
@@ -53,7 +53,6 @@ const Home: React.FC = () => {
         const config = {
             headers: {
                 'x-access-token': `${token}`,
-                'content-type': 'multipart/form-data'
             }
         }
 
