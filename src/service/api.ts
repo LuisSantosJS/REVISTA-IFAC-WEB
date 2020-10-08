@@ -1,5 +1,5 @@
 import axios from 'axios';
-const URL = 'http://localhost:8877'
+const URL = 'https://api-revista.herokuapp.com'
 const api = axios.create({
     baseURL: URL,
     validateStatus: (status) => {
