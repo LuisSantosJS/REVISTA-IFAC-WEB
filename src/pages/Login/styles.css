@@ -1,12 +1,13 @@
 .form-admin{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     justify-items: center;
     flex-direction: column;
     padding: 30px;
     width: 80vh;
-    height:  70vh;
+    min-height:  70vh;
+    max-height: none;
     max-width:  90vw;
     background-color:white;
     box-shadow: 10px 10px 5px  #378183;

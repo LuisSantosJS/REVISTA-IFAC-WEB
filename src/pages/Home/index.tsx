@@ -6,6 +6,7 @@ import { useToasts } from 'react-toast-notifications';
 import { useToken } from '../../context/ContextAuth';
 import { Link } from 'react-router-dom';
 const Home: React.FC = () => {
+    const Logo = require('../../assets/ifac.png')
     const List = require('../../assets/list.png');
     const { token } = useToken();
     const { addToast } = useToasts();

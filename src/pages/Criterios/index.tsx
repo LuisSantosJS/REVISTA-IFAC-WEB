@@ -7,6 +7,7 @@ const Criterios: React.FC = () => {
     const a: string = chlindren.a;
     const b: string = chlindren.b;
     const c: string = chlindren.c;
+    const d: string = chlindren.d;
 
     const Aa = a.split(',');
     const Bb = b.split(',');
@@ -40,8 +41,8 @@ const Criterios: React.FC = () => {
                                 <td> Adequação e qualidade das ilustrações</td>
                                 <td>{Aa[3]}</td>
                             </tr>
-                        </tbody>
 
+                        </tbody>
 
 
                         <thead>
@@ -102,6 +103,13 @@ const Criterios: React.FC = () => {
                             <tr>
                                 <td> Resultados satisfatórios </td>
                                 <td>{Cc[4]}</td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td className='vniasyuvbapjcpeoi' >({d === '0' ? 'X' : '  '}) Não Recomendada</td>
+                                <td className='vniasyuvbapjcpeoi'>({d === '1' ? 'X' : '  '}) Recomendada</td>
+                                <td className='vniasyuvbapjcpeoi' >({d === '2' ? 'X' : '  '}) Recomendada com restrições</td>
                             </tr>
                         </tbody>
                     </table>

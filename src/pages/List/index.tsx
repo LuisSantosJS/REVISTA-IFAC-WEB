@@ -12,6 +12,7 @@ interface Item {
     a: string,
     b: string,
     c: string,
+    d:string,
 }
 const List: React.FC = () => {
     const { token } = useToken();
@@ -45,7 +46,7 @@ const List: React.FC = () => {
                                     <tr key={index}>
                                         <td>{res.name}</td>
                                         <td>{res.artigo}</td>
-                                        <td><Link to={`/criterios/${res.a}/${res.b}/${res.c}`} className={'nodunbobw'}>VER AVALIAÇÃO</Link></td>
+                                        <td><Link to={`/criterios/${res.a}/${res.b}/${res.c}/${res.d}`} className={'nodunbobw'}>VER AVALIAÇÃO</Link></td>
                                     </tr>
                                 )
                             })}
