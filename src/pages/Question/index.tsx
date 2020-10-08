@@ -26,12 +26,14 @@ const Question: React.FC = () => {
 
 
     const onSubmit = () => {
+
         if ((aa.length === 0) || (bb.length === 0) || (cc.length === 0) || (dd.length === 0) || (ee.length === 0) || (ff.length === 0) || (gg.length === 0) || (hh.length === 0) || (ii.length === 0) || (jj.length === 0) || (kk.length === 0) || (ll.length === 0) || (mm.length === 0) || (nn.length === 0)||(oo.length === 0)) {
             return addToast(`Avalie todos os campos`, {
                 appearance: 'error',
                 autoDismiss: true,
             })
         }
+        
         api.post('/docum/create', {
             docID: id,
             a: `${aa},${bb},${cc},${dd}`,

@@ -1,0 +1,24 @@
+.form-recusaa{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    justify-items: center;
+    flex-direction: column;
+    padding: 30px;
+    width: 80vh;
+    min-height:  40vh;
+    max-height: none;
+    max-width:  90vw;
+    background-color:white;
+    box-shadow: 10px 10px 5px  #378183;
+}
+
+.avtsbt{
+    padding: 15px;
+}
+
+.vabrhuobrsuygvorsucbur{
+    display: flex;
+    width: 80%;
+    padding: 10px;
+}

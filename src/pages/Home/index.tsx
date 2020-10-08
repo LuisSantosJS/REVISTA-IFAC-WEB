@@ -6,7 +6,7 @@ import { useToasts } from 'react-toast-notifications';
 import { useToken } from '../../context/ContextAuth';
 import { Link } from 'react-router-dom';
 const Home: React.FC = () => {
-    const Logo = require('../../assets/ifac.png')
+
     const List = require('../../assets/list.png');
     const { token } = useToken();
     const { addToast } = useToasts();
@@ -22,19 +22,27 @@ const Home: React.FC = () => {
             })
         }
 
-        const config = {
-            headers: { 'x-access-token': `${token}` }
-        }
-        api.post('/email/send', {
+        const campos: any = {
             email: String(email.toLowerCase()),
             artigo,
             resumo,
-            name
-        }, config).then(res => {
+            name,
+
+        }
+
+
+
+        const config = {
+            headers: {
+                'x-access-token': `${token}`
+            }
+        }
+
+        api.post('/email/send', campos, config).then(res => {
             if (res.data.message === 'success') {
                 setEmail('');
                 setName('');
-                
+
                 return addToast(`Email enviado!`, {
                     appearance: 'success',
                     autoDismiss: true,
@@ -79,6 +87,10 @@ const Home: React.FC = () => {
                             <label htmlFor="lname"> Nome do artigo</label>
                             <input className={'inpstshome'} value={artigo} onChange={(e) => artigoValue(e)} type="text" id="lname" name="lname" />
                         </div>
+                        {/* <div className='rowss'>
+                            <label htmlFor="anexo">Anexo</label>
+                            <input onChange={(e: any) => setAnexo(e.target.files[0])} type="file" id="anexo" name="anexo" />
+                        </div> */}
                         <div className="rowss">
                             <label htmlFor="lname"> Resumo do artigo</label>
                             <textarea className='textareas' value={resumo} onChange={(e) => resumoValue(e)} name="" id="" />

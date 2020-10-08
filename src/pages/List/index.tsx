@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './styles.css';
-import { Link } from 'react-router-dom'
+import {Link} from 'react-router-dom'
 import api from '../../service/api';
 import { useToken } from '../../context/ContextAuth';
 import Header from '../../components/Header';
@@ -12,12 +12,17 @@ interface Item {
     a: string,
     b: string,
     c: string,
-    d:string,
-    desc:string,
+    status: string,
+    desculpa:string,
+    d: string,
+    desc: string,
 }
 const List: React.FC = () => {
     const { token } = useToken();
+    const List = require('../../assets/list.png');
     const [listItem, setListItem] = useState<Item[]>([]);
+    const [modal, setModal] = useState<boolean>(false);
+    const [descs, setDescs] = useState<string>('')
     const loadItems = () => {
         const config = {
             headers: { 'x-access-token': `${token}` }
@@ -33,6 +38,10 @@ const List: React.FC = () => {
         loadItems();
         // eslint-disable-next-line
     }, []);
+    const onRecuseText = (e: string) =>{
+        setDescs(e);
+        setModal(true)
+    }
     return (
         <>
             <Header />
@@ -45,6 +54,7 @@ const List: React.FC = () => {
                             {listItem.map((res, index) => {
                                 return (
                                     <tr key={index}>
+                                        <td onClick={()=> res.status === 'recusado' ?onRecuseText(res.desculpa) : {}} className={res.status === 'recusado' ? 'reeeeeeed' : ''} >{String(res.status.toUpperCase())}</td>
                                         <td>{res.name}</td>
                                         <td>{res.artigo}</td>
                                         <td><Link to={`/criterios/${res.a}/${res.b}/${res.c}/${res.d}/${res.desc}`} className={'nodunbobw'}>VER AVALIAÇÃO</Link></td>
@@ -57,6 +67,16 @@ const List: React.FC = () => {
 
                 </div>
             </div>
+            {modal && <div className="modal" >
+                <div onClick={() => { }} className="modal-content">
+                    <textarea className='bcuoahsvoyuvvtasbps' name="" id="" >{descs}</textarea>
+                    <div className='cancel' onClick={() => setModal(false)}>Fechar</div>
+                </div>
+            </div>}
+
+            <Link to='/' className="float">
+                <img height='40%' src={List} alt="" />
+            </Link>
         </>
     )
 }
