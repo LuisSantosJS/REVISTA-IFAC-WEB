@@ -105,6 +105,9 @@ const Criterios: React.FC = () => {
                                 <td>{Cc[4]}</td>
                             </tr>
                         </tbody>
+
+                    </table>
+                    <table id="customers2">
                         <tbody>
                             <tr>
                                 <td className='vniasyuvbapjcpeoi' >({d === '0' ? 'X' : '  '}) Não Recomendada</td>
