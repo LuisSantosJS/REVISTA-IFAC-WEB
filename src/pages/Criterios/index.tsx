@@ -1,18 +1,44 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './styles.css';
+import api from '../../service/api';
 import { useParams } from 'react-router-dom';
+
+interface Item {
+    id: number,
+    docID: number,
+    a: string,
+    b: string,
+    c: string,
+    d: string,
+    desc: string
+}
 const Criterios: React.FC = () => {
 
     const chlindren: any = useParams();
-    const a: string = chlindren.a;
-    const b: string = chlindren.b;
-    const c: string = chlindren.c;
-    const d: string = chlindren.d;
-    const desc: string = chlindren.desc;
+    const ID = chlindren.id;
+    const [a, setA] = useState<string>('')
+    const [b, setB] = useState<string>('')
+    const [c, setC] = useState<string>('')
+    const [d, setD] = useState<string>('')
+    const [desc, setDesc] = useState<string>('')
 
-    const Aa = a.split(',');
-    const Bb = b.split(',');
-    const Cc = c.split(',');
+    useEffect(() => {
+        api.post('/docume/show', { id: ID }).then(res => {
+            if (res.data.message === 'success') {
+                const data: Item = res.data.res[0];
+                setA(data.a);
+                setB(data.b);
+                setC(data.c);
+                setD(data.d);
+                setDesc(data.desc);
+    
+            }
+        }).catch((err) => {})
+    }, []);
+
+    const Aa: string[] = a.split(',');
+    const Bb: string[] = b.split(',');
+    const Cc: string[] = c.split(',');
 
     return (
         <>
@@ -68,10 +94,6 @@ const Criterios: React.FC = () => {
                             <tr>
                                 <td> A metodologia foi adequada na análise dos resultados</td>
                                 <td>{Bb[3]}</td>
-                            </tr>
-                            <tr>
-                                <td> A metodologia foi adequada naanálise dos resultados</td>
-                                <td>{Bb[4]}</td>
                             </tr>
                         </tbody>
 

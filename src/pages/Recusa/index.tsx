@@ -6,6 +6,7 @@ import { useToasts } from 'react-toast-notifications';
 const Recusa: React.FC = () => {
     const [desculpa, setDesculpa] = useState<string>('')
     const chlindren: any = useParams();
+    const Logo = require('../../assets/ifac.png')
     const { addToast } = useToasts();
     const onSubmit = () => {
         if (desculpa.length === 0) {
@@ -50,6 +51,7 @@ const Recusa: React.FC = () => {
         <>
             <div className="App">
                 <div className='form-recusaa'>
+                    <img src={Logo} alt=""/>
                     <h3 className='avtsbt'>Qual motivo?</h3>
                     <textarea value={desculpa} onChange={(e) => setDesculpa(e.target.value)} className='vabrhuobrsuygvorsucbur' rows={10} name="" id="" >
 

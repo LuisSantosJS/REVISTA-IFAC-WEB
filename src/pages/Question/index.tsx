@@ -9,7 +9,6 @@ const Question: React.FC = () => {
     const [bb, setBb] = useState<string>('');
     const [cc, setCc] = useState<string>('');
     const [dd, setDd] = useState<string>('');
-    const [ee, setEe] = useState<string>('');
     const [ff, setFf] = useState<string>('');
     const [gg, setGg] = useState<string>('');
     const [hh, setHh] = useState<string>('');
@@ -27,13 +26,13 @@ const Question: React.FC = () => {
 
     const onSubmit = () => {
 
-        if ((aa.length === 0) || (bb.length === 0) || (cc.length === 0) || (dd.length === 0) || (ee.length === 0) || (ff.length === 0) || (gg.length === 0) || (hh.length === 0) || (ii.length === 0) || (jj.length === 0) || (kk.length === 0) || (ll.length === 0) || (mm.length === 0) || (nn.length === 0)||(oo.length === 0)) {
+        if ((aa.length === 0) || (bb.length === 0) || (cc.length === 0) || (dd.length === 0) || (ff.length === 0) || (gg.length === 0) || (hh.length === 0) || (ii.length === 0) || (jj.length === 0) || (kk.length === 0) || (ll.length === 0) || (mm.length === 0) || (nn.length === 0) || (oo.length === 0)) {
             return addToast(`Avalie todos os campos`, {
                 appearance: 'error',
                 autoDismiss: true,
             })
         }
-        
+
         api.post('/docum/create', {
             docID: id,
             a: `${aa},${bb},${cc},${dd}`,
@@ -139,16 +138,6 @@ const Question: React.FC = () => {
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>Indicação das referências bibliográficas</td>
-                                    <td className='fsrgtashj'>
-                                        <div onClick={() => setEe('1')} className={ee === '1' ? 'divavalafgvrAA' : 'divavalafgvr'}  >1</div>
-                                        <div onClick={() => setEe('2')} className={ee === '2' ? 'divavalafgvrAA' : 'divavalafgvr'}  >2</div>
-                                        <div onClick={() => setEe('3')} className={ee === '3' ? 'divavalafgvrAA' : 'divavalafgvr'}  >3</div>
-                                        <div onClick={() => setEe('4')} className={ee === '4' ? 'divavalafgvrAA' : 'divavalafgvr'}  >4</div>
-                                        <div onClick={() => setEe('5')} className={ee === '5' ? 'divavalafgvrAA' : 'divavalafgvr'}  >5</div>
-                                    </td>
-                                </tr>
                                 <tr>
                                     <td>Possui fundamentação teórica </td>
                                     <td className='fsrgtashj'>
@@ -257,8 +246,8 @@ const Question: React.FC = () => {
                         <table id="customers2">
                             <tbody>
                                 <td className='vniasyuvbapjcpeoi' onClick={() => setOo('0')}>({oo === '0' ? 'X' : '  '}) Não Recomendada</td>
-                                <td  className='vniasyuvbapjcpeoi'onClick={() => setOo('1')}>({oo === '1' ? 'X' : '  '}) Recomendada</td>
-                                <td  className='vniasyuvbapjcpeoi' onClick={() => setOo('2')}>({oo === '2' ? 'X' : '  '}) Recomendada com restrições</td>
+                                <td className='vniasyuvbapjcpeoi' onClick={() => setOo('1')}>({oo === '1' ? 'X' : '  '}) Recomendada</td>
+                                <td className='vniasyuvbapjcpeoi' onClick={() => setOo('2')}>({oo === '2' ? 'X' : '  '}) Recomendada com restrições</td>
                             </tbody>
                         </table>
 
@@ -266,7 +255,7 @@ const Question: React.FC = () => {
                         <table id="customers2">
                             <tbody>
                                 <td>Total</td>
-                                <td>{Number(Number(aa) + Number(bb) + Number(cc) + Number(dd) + Number(ee) + Number(ff) + Number(gg) + Number(hh) + Number(ii) + Number(jj) + Number(kk) + Number(ll) + Number(mm) + Number(nn))}</td>
+                                <td>{Number(Number(aa) + Number(bb) + Number(cc) + Number(dd) + Number(Number(ff)*2) + Number(gg) + Number(hh) + Number(Number(ii)*2) + Number(Number(jj) * 2) + Number(Number(kk) * 2) + Number(Number(ll) * 2) + Number(Number(mm) * 2) + Number(Number(nn) * 2))}</td>
                             </tbody>
                         </table>
 

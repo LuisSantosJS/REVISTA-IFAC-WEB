@@ -12,7 +12,7 @@ const Authenticate: React.FC = () => {
                     <Route path="/" exact component={Home} />
                     <Route path='/assessments' exact component={List} />
                     <Route path='/responder/formulario/:name/:id' exact component={Question} />
-                    <Route path='/criterios/:a/:b/:c/:d/:desc' exact component={Criterios} />
+                    <Route path='/criterios/:id' exact component={Criterios} />
                     <Route component={Home} />
                 </Switch>
             </BrowserRouter>

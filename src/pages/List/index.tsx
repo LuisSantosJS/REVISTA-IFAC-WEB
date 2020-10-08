@@ -50,14 +50,21 @@ const List: React.FC = () => {
                 <div className="containerlistava">
                     <h2 className='biufvivfiuw'>LISTA DE AVALIAÇÕES</h2>
                     <table id="customers">
+                        <thead>
+                            <th>Parceirista</th>
+                            <th>Artigo</th>
+                            <th>Status</th>
+                            <th>Avaliação</th>
+                        </thead>
                         <tbody>
                             {listItem.map((res, index) => {
+    
                                 return (
                                     <tr key={index}>
-                                        <td onClick={()=> res.status === 'recusado' ?onRecuseText(res.desculpa) : {}} className={res.status === 'recusado' ? 'reeeeeeed' : ''} >{String(res.status.toUpperCase())}</td>
                                         <td>{res.name}</td>
                                         <td>{res.artigo}</td>
-                                        <td><Link to={`/criterios/${res.a}/${res.b}/${res.c}/${res.d}/${res.desc}`} className={'nodunbobw'}>VER AVALIAÇÃO</Link></td>
+                                        <td onClick={()=> res.status === 'recusado' ?onRecuseText(res.desculpa) : {}} className={res.status === 'recusado' ? 'reeeeeeed' : ''} >{String(res.status.toUpperCase())}</td>
+                                        <td><Link to={`/criterios/${res.id}`} className={'nodunbobw'}>VER AVALIAÇÃO</Link></td>
                                     </tr>
                                 )
                             })}
@@ -69,6 +76,7 @@ const List: React.FC = () => {
             </div>
             {modal && <div className="modal" >
                 <div onClick={() => { }} className="modal-content">
+                    <h2>Motivo</h2>
                     <textarea className='bcuoahsvoyuvvtasbps' name="" id="" >{descs}</textarea>
                     <div className='cancel' onClick={() => setModal(false)}>Fechar</div>
                 </div>

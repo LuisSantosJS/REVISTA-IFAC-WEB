@@ -10,10 +10,28 @@ const Home: React.FC = () => {
     const List = require('../../assets/list.png');
     const { token } = useToken();
     const { addToast } = useToasts();
+    const [anexo, setAnexo] = useState<any>();
     const [email, setEmail] = useState<string>('');
     const [name, setName] = useState<string>('');
     const [artigo, setArtigo] = useState<string>('');
     const [resumo, setResumo] = useState<string>('');
+    const submitImg = (e: any) => {
+        e.preventDefault();
+        let formData = new FormData();
+        formData.append('anexo', e.target.files[0]);
+        const config = {
+            headers: {
+                'x-access-token': `${token}`,
+                'content-type': 'multipart/form-data'
+            }
+        }
+        api.post('/uploads/anexo', formData, config).then(res => {
+            console.log(res.data)
+            if (res.data.message === 'success') {
+                setAnexo(String(res.data.res));
+            }
+        })
+    }
     const onSubmit = () => {
         if ((email.length === 0) || (name.length === 0) || (artigo.length === 0) || (resumo.length === 0)) {
             return addToast(`Preencha todos os campos`, {
@@ -27,14 +45,15 @@ const Home: React.FC = () => {
             artigo,
             resumo,
             name,
-
+            anexo
         }
 
 
 
         const config = {
             headers: {
-                'x-access-token': `${token}`
+                'x-access-token': `${token}`,
+                'content-type': 'multipart/form-data'
             }
         }
 
@@ -71,8 +90,8 @@ const Home: React.FC = () => {
             <div className="spacinfss" />
             <div className="App">
                 <div className="containersendemailhome">
-                    <form className='formsss'>
-                        <h2>ENVIAR NOVO EMAIL</h2>
+                    <form className='formsss' encType='multipart/form-data'>
+                        <h2 className='vnashbvias'>ENVIAR NOVO EMAIL</h2>
                         <div className='rowss rowsa'>
                             <div className="rowwww">
                                 <label htmlFor="fname"> Email de destino</label>
@@ -87,10 +106,10 @@ const Home: React.FC = () => {
                             <label htmlFor="lname"> Nome do artigo</label>
                             <input className={'inpstshome'} value={artigo} onChange={(e) => artigoValue(e)} type="text" id="lname" name="lname" />
                         </div>
-                        {/* <div className='rowss'>
+                        <div className='rowss'>
                             <label htmlFor="anexo">Anexo</label>
-                            <input onChange={(e: any) => setAnexo(e.target.files[0])} type="file" id="anexo" name="anexo" />
-                        </div> */}
+                            <input onChange={(e: any) => submitImg(e)} type="file" id="anexo" name="anexo" />
+                        </div>
                         <div className="rowss">
                             <label htmlFor="lname"> Resumo do artigo</label>
                             <textarea className='textareas' value={resumo} onChange={(e) => resumoValue(e)} name="" id="" />
