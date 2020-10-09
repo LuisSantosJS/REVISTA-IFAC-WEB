@@ -36,9 +36,12 @@ display: flex;
 }
 
 .vniuasrbvisbrv{
+    display: flex;
     padding: 50px;
     height: 40px;
     width: 100%;
+    align-items: center;
+    justify-content: center;
 }
 .h2spacinfagr{
     padding: 40px;

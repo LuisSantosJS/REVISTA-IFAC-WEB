@@ -5,6 +5,7 @@ import { useToasts } from 'react-toast-notifications';
 import { useParams } from "react-router-dom";
 const Question: React.FC = () => {
     const { name, id }: any = useParams();
+    const [alert, setAlert] = useState<string>('');
     const [aa, setAa] = useState<string>('');
     const [bb, setBb] = useState<string>('');
     const [cc, setCc] = useState<string>('');
@@ -25,10 +26,17 @@ const Question: React.FC = () => {
 
     useEffect(() => {
         api.get(`/exist/docume/${id}/not`).then(res => {
-            return addToast(`${res.data.res}`, {
+            addToast(`${res.data.res}`, {
                 appearance: 'info',
                 autoDismiss: true,
             })
+            if(res.data.message === 'exist'){
+                setAlert(res.data.res2);
+                return addToast(`${res.data.res2}`, {
+                    appearance: 'info',
+                })
+            }
+            
         })
     }, [])
 
@@ -274,7 +282,9 @@ const Question: React.FC = () => {
                             <label > Comentários adicionais</label>
                             <textarea value={desc} onChange={(e) => setDesc(e.target.value)} className='bcuoahsvoyuvvtasbp' name="" id="" />
                         </div>
-                        <div className="vniuasrbvisbrv"></div>
+                        <div className="vniuasrbvisbrv">
+                                    <h5>{alert}</h5>
+                        </div>
 
                         <strong onClick={onSubmit}>
                             SUBMETER AVALIAÇÃO
