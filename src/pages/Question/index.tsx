@@ -30,13 +30,13 @@ const Question: React.FC = () => {
                 appearance: 'info',
                 autoDismiss: true,
             })
-            if(res.data.message === 'exist'){
+            if (res.data.message === 'exist') {
                 setAlert(res.data.res2);
                 return addToast(`${res.data.res2}`, {
                     appearance: 'info',
                 })
             }
-            
+
         })
     }, [])
 
@@ -283,7 +283,8 @@ const Question: React.FC = () => {
                             <textarea value={desc} onChange={(e) => setDesc(e.target.value)} className='bcuoahsvoyuvvtasbp' name="" id="" />
                         </div>
                         <div className="vniuasrbvisbrv">
-                                    <h5>{alert}</h5>
+                            <br />
+                            <h5>{alert}</h5>
                         </div>
 
                         <strong onClick={onSubmit}>
