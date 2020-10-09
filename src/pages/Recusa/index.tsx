@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './styles.css';
 import api from '../../service/api';
 import { useParams } from 'react-router-dom';
@@ -8,6 +8,14 @@ const Recusa: React.FC = () => {
     const chlindren: any = useParams();
     const Logo = require('../../assets/ifac.png')
     const { addToast } = useToasts();
+    useEffect(()=>{
+        api.get(`/exist/docume/${chlindren.id}/yes`).then(res=>{
+            return addToast(`${res.data.res}`, {
+                appearance: 'info',
+                autoDismiss: true,
+            })
+        })
+    },[])
     const onSubmit = () => {
         if (desculpa.length === 0) {
             return addToast(`Preencha o campo!`, {

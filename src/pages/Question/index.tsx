@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './styles.css';
 import api from '../../service/api';
 import { useToasts } from 'react-toast-notifications';
@@ -22,6 +22,15 @@ const Question: React.FC = () => {
     const [desc, setDesc] = useState('');
     const { addToast } = useToasts();
     const Logo = require('../../assets/ifac.png');
+
+    useEffect(() => {
+        api.get(`/exist/docume/${id}/not`).then(res => {
+            return addToast(`${res.data.res}`, {
+                appearance: 'info',
+                autoDismiss: true,
+            })
+        })
+    }, [])
 
 
     const onSubmit = () => {
@@ -267,9 +276,9 @@ const Question: React.FC = () => {
                         </div>
                         <div className="vniuasrbvisbrv"></div>
 
-                            <strong  onClick={onSubmit}>
-                                SUBMETER AVALIAÇÃO
-                            </strong> 
+                        <strong onClick={onSubmit}>
+                            SUBMETER AVALIAÇÃO
+                            </strong>
 
                         <div className="vniuasrbvisbrv"></div>
 
