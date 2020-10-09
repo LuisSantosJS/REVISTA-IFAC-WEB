@@ -52,9 +52,19 @@ display: flex;
 .divavalafgvr{
     cursor: pointer;
 }
+.avnbisurgoa{
+    font-weight: bold;
+}
 .divavalafgvrAA{
     cursor: pointer;
-    color:green;
+    color:white;
+    background-color: #707070;
+
+    padding-left: 5%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-right: 5%;
+    border-radius: 100%;
     font-weight: bold;
 }
 .asvnoarivfhcor0tjpew{

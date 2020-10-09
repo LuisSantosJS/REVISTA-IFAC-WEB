@@ -254,7 +254,7 @@ const Question: React.FC = () => {
                         <h2 className='h2spacinfagr' />
                         <table id="customers2">
                             <tbody>
-                                <td>Total</td>
+                                <td className='avnbisurgoa'>Total</td>
                                 <td>{Number(Number(aa) + Number(bb) + Number(cc) + Number(dd) + Number(Number(ff) * 2) + Number(gg) + Number(hh) + Number(Number(ii) * 2) + Number(Number(jj) * 2) + Number(Number(kk) * 2) + Number(Number(ll) * 2) + Number(Number(mm) * 2) + Number(Number(nn) * 2))}</td>
                             </tbody>
                         </table>
