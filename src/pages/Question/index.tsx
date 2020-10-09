@@ -282,8 +282,9 @@ const Question: React.FC = () => {
                             <label > Comentários adicionais</label>
                             <textarea value={desc} onChange={(e) => setDesc(e.target.value)} className='bcuoahsvoyuvvtasbp' name="" id="" />
                         </div>
+                        <br />
                         <div className="vniuasrbvisbrv">
-                            <br />
+         
                             <h5>{alert}</h5>
                         </div>
 
