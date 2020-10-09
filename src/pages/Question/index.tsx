@@ -266,13 +266,10 @@ const Question: React.FC = () => {
                             <textarea value={desc} onChange={(e) => setDesc(e.target.value)} className='bcuoahsvoyuvvtasbp' name="" id="" />
                         </div>
                         <div className="vniuasrbvisbrv"></div>
-                        {oo !== '0' ?
+
                             <strong className={'submcviuas'} onClick={onSubmit}>
                                 SUBMETER AVALIAÇÃO
-                            </strong> :
-                            <div className={'rerered'} onClick={onSubmit}>
-                                SUBMETER AVALIAÇÃO
-                        </div>}
+                            </strong> 
 
                         <div className="vniuasrbvisbrv"></div>
 
