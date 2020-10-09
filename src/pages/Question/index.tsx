@@ -267,7 +267,7 @@ const Question: React.FC = () => {
                         </div>
                         <div className="vniuasrbvisbrv"></div>
 
-                            <strong className={'submcviuas'} onClick={onSubmit}>
+                            <strong  onClick={onSubmit}>
                                 SUBMETER AVALIAÇÃO
                             </strong> 
 
