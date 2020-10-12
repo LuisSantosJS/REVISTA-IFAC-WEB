@@ -10,6 +10,8 @@ type ContextType = {
     setUserEmail: (value: string) => void;
     userPassword: string;
     setUserPassword: (value: string) => void;
+    artigo: string;
+    setArtigo: (value: string) => void;
 
 };
 
@@ -23,6 +25,8 @@ const ContextMain = createContext<ContextType>({
     setUserEmail: (value: string) => { },
     userPassword: '',
     setUserPassword: (value: string) => { },
+    artigo: '',
+    setArtigo: (value: string) => { },
 });
 
 
@@ -32,6 +36,7 @@ const Provider: React.FC = ({ children }) => {
     const [userSaved, setUserSaved] = useState<boolean>(false);
     const [token, setToken] = useState<string>('');
     const [userEmail, setUserEmail] = useState<string>('');
+    const [artigo, setArtigo] = useState<string>('');
     const [userPassword, setUserPassword] = useState<string>('');
 
     useEffect(() => {
@@ -64,6 +69,7 @@ const Provider: React.FC = ({ children }) => {
     return (
         <ContextMain.Provider value={{
             userSaved, setUserSaved,
+            artigo, setArtigo,
             token, setToken,
             userEmail, setUserEmail,
             userPassword, setUserPassword
@@ -96,4 +102,10 @@ export function useUserPassword() {
     const infoUser: ContextType = useContext(ContextMain);
     const { userPassword, setUserPassword } = infoUser;
     return { userPassword, setUserPassword };
+}
+
+export function useArtigoName() {
+    const infoUser: ContextType = useContext(ContextMain);
+    const { artigo, setArtigo } = infoUser;
+    return { artigo, setArtigo };
 }

@@ -4,9 +4,31 @@
     justify-content:flex-start;
     width: 90vw;
     max-width: 800px;
-    height: 90vh;
-    padding: 10px;
+    height: 90%;
     background-color: white;
     flex-direction: column;
-    overflow: scroll;
+    /* overflow: scroll; */
+}
+
+  
+.App2{
+    display:flex;
+    width: 100vw;
+    height: 230vh;
+    padding: 0px;
+    margin: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background-color:#378183;
+    box-sizing: border-box;
+    justify-items: center;
+    align-items:flex-start;
+    justify-content: center;
+
+}
+.vrsv4{
+    width: 80%;
+    text-align: center;
+    padding: 40px;
 }

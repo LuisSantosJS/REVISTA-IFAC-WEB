@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import './styles.css';
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import api from '../../service/api';
-import { useToken } from '../../context/ContextAuth';
+import { useToken, useArtigoName } from '../../context/ContextAuth';
 import Header from '../../components/Header';
 interface Item {
     id: string;
@@ -13,7 +13,7 @@ interface Item {
     b: string,
     c: string,
     status: string,
-    desculpa:string,
+    desculpa: string,
     d: string,
     desc: string,
 }
@@ -21,6 +21,7 @@ const List: React.FC = () => {
     const { token } = useToken();
     const List = require('../../assets/list.png');
     const [listItem, setListItem] = useState<Item[]>([]);
+    const { setArtigo } = useArtigoName();
     const [modal, setModal] = useState<boolean>(false);
     const [descs, setDescs] = useState<string>('')
     const loadItems = () => {
@@ -38,7 +39,7 @@ const List: React.FC = () => {
         loadItems();
         // eslint-disable-next-line
     }, []);
-    const onRecuseText = (e: string) =>{
+    const onRecuseText = (e: string) => {
         setDescs(e);
         setModal(true)
     }
@@ -58,13 +59,13 @@ const List: React.FC = () => {
                         </thead>
                         <tbody>
                             {listItem.map((res) => {
-    
+
                                 return (
                                     <tr key={res.id}>
                                         <td>{res.name}</td>
                                         <td>{res.artigo}</td>
-                                        <td onClick={()=> res.status === 'recusado' ?onRecuseText(res.desculpa) : {}} className={res.status === 'recusado' ? 'reeeeeeed' : ''} >{String(res.status.toUpperCase())}</td>
-                                        <td><Link to={`/criterios/${res.id}`} className={res.status === 'recusado' ? 'nodunbobw2' : 'nodunbobw'}>VER AVALIAÇÃO</Link></td>
+                                        <td onClick={() => res.status === 'recusado' ? onRecuseText(res.desculpa) : {}} className={res.status === 'recusado' ? 'reeeeeeed' : ''} >{String(res.status.toUpperCase())}</td>
+                                        <td><Link to={`/criterios/${res.id}`} onClick={()=> setArtigo(res.artigo)} className={res.status === 'recusado' ? 'nodunbobw2' : 'nodunbobw'}>VER AVALIAÇÃO</Link></td>
                                     </tr>
                                 )
                             })}

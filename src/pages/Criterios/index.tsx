@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './styles.css';
 import api from '../../service/api';
+import { useArtigoName } from '../../context/ContextAuth';
 import { useParams } from 'react-router-dom';
 
 interface Item {
@@ -21,6 +22,7 @@ const Criterios: React.FC = () => {
     const [c, setC] = useState<string>('')
     const [d, setD] = useState<string>('')
     const [desc, setDesc] = useState<string>('')
+    const { artigo } = useArtigoName()
 
     useEffect(() => {
         api.post('/docume/show', { id: ID }).then(res => {
@@ -41,8 +43,9 @@ const Criterios: React.FC = () => {
 
     return (
         <>
-            <div className="App">
+            <div className="App2">
                 <div className="viewContainehgxjhcy">
+                    <h4 className='vrsv4'>{artigo}</h4>
                     <table id="customers2">
                         <thead>
                             <tr>
@@ -127,8 +130,9 @@ const Criterios: React.FC = () => {
                                 <td>{Cc[4]}</td>
                             </tr>
                         </tbody>
-
+              
                     </table>
+                    <br />
                     <table id="customers2">
                         <tbody>
                             <tr>
@@ -140,16 +144,16 @@ const Criterios: React.FC = () => {
                     </table>
 
 
-                    <h2 className='h2spacinfagr' />
+                    <br />
                     <table id="customers2">
                         <tbody>
                             <td className='avnbisurgoa'>Total</td>
                             <td>{Number(Number(Aa[0]) + Number(Aa[1]) + Number(Aa[2]) + Number(Aa[3]) + Number(Number(Bb[0]) * 2) + Number(Bb[1]) + Number(Bb[2]) + Number(Number(Bb[3]) * 2) + Number(Number(Cc[0]) * 2) + Number(Number(Cc[1]) * 2) + Number(Number(Cc[2]) * 2) + Number(Number(Cc[3]) * 2) + Number(Number(Cc[4]) * 2))}</td>
                         </tbody>
                     </table>
+                    <br />
 
 
-                    <h2 className='h2spacinfagr' />
 
                     <div className='asvnoarivfhcor0tjpew'>
                         <label > Comentários adicionais</label>
