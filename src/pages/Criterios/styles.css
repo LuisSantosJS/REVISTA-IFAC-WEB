@@ -4,7 +4,7 @@
     justify-content:flex-start;
     width: 90vw;
     max-width: 800px;
-    height: 90%;
+    height: 100%;
     background-color: white;
     flex-direction: column;
     /* overflow: scroll; */
