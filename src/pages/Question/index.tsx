@@ -280,7 +280,7 @@ const Question: React.FC = () => {
 
                         <div className='asvnoarivfhcor0tjpew'>
                             <label > Comentários adicionais</label>
-                            <textarea value={desc} onChange={(e) => setDesc(e.target.value)} className='bcuoahsvoyuvvtasbp' name="" id="" />
+                            <textarea value={desc} onChange={(e) => setDesc(e.target.value)} className='bcuoahsvoyuvvtasbp' name="" id="" cols={20}/>
                         </div>
                         <br />
                         <div className="vniuasrbvisbrv">

@@ -132,7 +132,7 @@ const Criterios: React.FC = () => {
                         </tbody>
               
                     </table>
-                    <br />
+                    <br/>
                     <table id="customers2">
                         <tbody>
                             <tr>
@@ -144,20 +144,20 @@ const Criterios: React.FC = () => {
                     </table>
 
 
-                    <br />
+
                     <table id="customers2">
                         <tbody>
                             <td className='avnbisurgoa'>Total</td>
                             <td>{Number(Number(Aa[0]) + Number(Aa[1]) + Number(Aa[2]) + Number(Aa[3]) + Number(Number(Bb[0]) * 2) + Number(Bb[1]) + Number(Bb[2]) + Number(Number(Bb[3]) * 2) + Number(Number(Cc[0]) * 2) + Number(Number(Cc[1]) * 2) + Number(Number(Cc[2]) * 2) + Number(Number(Cc[3]) * 2) + Number(Number(Cc[4]) * 2))}</td>
                         </tbody>
                     </table>
-                    <br />
+
 
 
 
                     <div className='asvnoarivfhcor0tjpew'>
                         <label > Comentários adicionais</label>
-                        <textarea value={desc} disabled className='bcuoahsvoyuvvtasbp' name="" id="" />
+                        <textarea value={desc} disabled className='bcuoahsvoyuvvtasbp' />
                     </div>
                     <div className="vniuasrbvisbrv"></div>
                 </div>
