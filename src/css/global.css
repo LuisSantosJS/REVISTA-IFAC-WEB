@@ -12,11 +12,9 @@ body {
       monospace;
   }
   
-  html,
-  body,
-  #root {
-    height: 100vh;
-  }
+html{
+  background-color:#378183;
+}
   * {
       margin: 0;
       padding: 0;
@@ -27,7 +25,8 @@ body {
   .App{
       display:flex;
       width: 100vw;
-      height: 100vh;
+      min-height: 100vh;
+      max-height: auto;
       padding: 0px;
       margin: 0px;
       bottom: 0px;

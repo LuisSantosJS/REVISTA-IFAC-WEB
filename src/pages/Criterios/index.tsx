@@ -161,7 +161,6 @@ const Criterios: React.FC = () => {
                             {desc}
                         </div>
                     </div>
-                    <div className="vniuasrbvisbrv"></div>
                 </div>
             </div>
         </>

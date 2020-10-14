@@ -4,7 +4,8 @@
     justify-content:flex-start;
     width: 90vw;
     max-width: 800px;
-    height: 100%;
+    min-height: 100vh;
+    max-height: auto;
     background-color: white;
     flex-direction: column;
     /* overflow: scroll; */
@@ -14,7 +15,8 @@
 .App2{
     display:flex;
     width: 100vw;
-    height: 230vh;
+    min-height: 230vh;
+    max-height: auto;
     padding: 0px;
     margin: 0px;
     bottom: 0px;
