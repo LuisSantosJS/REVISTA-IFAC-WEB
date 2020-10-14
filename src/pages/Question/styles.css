@@ -83,8 +83,9 @@ display: flex;
     margin: 8px 0;
     min-height: 40%;
     max-height:auto;
-    
+    word-spacing: 4px;
     text-align: justify;
+    
     box-sizing: border-box;
     background-color: #ddd;
     border-style: solid;
