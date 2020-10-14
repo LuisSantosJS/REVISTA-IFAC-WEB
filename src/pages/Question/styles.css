@@ -78,11 +78,15 @@ display: flex;
 }
 
 .bcuoahsvoyuvvtasbp{
+    display: flex;
     width: 100%;
     margin: 8px 0;
     height: 80%;
     text-align: justify;
     box-sizing: border-box;
+    background-color: #ddd;
+    border-style: solid;
+    border-width: 1px;
     padding: 5px;
 
 }

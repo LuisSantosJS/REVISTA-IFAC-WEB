@@ -130,9 +130,9 @@ const Criterios: React.FC = () => {
                                 <td>{Cc[4]}</td>
                             </tr>
                         </tbody>
-              
+
                     </table>
-                    <br/>
+                    <br />
                     <table id="customers2">
                         <tbody>
                             <tr>
@@ -157,7 +157,9 @@ const Criterios: React.FC = () => {
 
                     <div className='asvnoarivfhcor0tjpew'>
                         <label > Comentários adicionais</label>
-                        <textarea value={desc} disabled className='bcuoahsvoyuvvtasbp' />
+                        <div className='bcuoahsvoyuvvtasbp' >
+                            {desc}
+                        </div>
                     </div>
                     <div className="vniuasrbvisbrv"></div>
                 </div>
