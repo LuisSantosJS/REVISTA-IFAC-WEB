@@ -45,7 +45,9 @@ const Criterios: React.FC = () => {
         <>
             <div className="App2">
                 <div className="viewContainehgxjhcy">
+                    <br />
                     <h4 className='vrsv4'>{artigo}</h4>
+                    <br />
                     <table id="customers2">
                         <thead>
                             <tr>
@@ -133,6 +135,7 @@ const Criterios: React.FC = () => {
 
                     </table>
                     <br />
+                    <br />
                     <table id="customers2">
                         <tbody>
                             <tr>
@@ -142,8 +145,9 @@ const Criterios: React.FC = () => {
                             </tr>
                         </tbody>
                     </table>
+                    <br />
 
-
+                    <br />
 
                     <table id="customers2">
                         <tbody>
@@ -154,7 +158,18 @@ const Criterios: React.FC = () => {
 
 
 
+                    <br />
+                    <br />
+                    <br />
 
+                    <br />
+                    <br />
+                    <br />
+
+                    <br />
+                    <br />
+                    <br />
+                    <br />
                     <div className='asvnoarivfhcor0tjpew'>
                         <label > Comentários adicionais</label>
                         <div className='bcuoahsvoyuvvtasbp' >
