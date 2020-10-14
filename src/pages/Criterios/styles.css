@@ -11,6 +11,23 @@
     /* overflow: scroll; */
 }
 
+@media print {
+    @page {
+        margin: 20px;
+      border: 20px;
+    }
+    .viewContainehgxjhcy, .viewContainehgxjhcy * {
+      visibility: visible;
+      
+    }
+    .viewContainehgxjhcy{
+      page-break-after:auto;
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+    }
+  }
   
 .App2{
     display:flex;
